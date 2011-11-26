@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>shiroyuki/Tori @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #cb2a63;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #34d59c; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #34d59c; }
-    h3 { text-align: center; color: #34d59c; }
-    a { color: #34d59c; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <meta charset='utf-8'>
+    <title>Tori, Web Framework for People with Deadline</title>
+    <link rel="stylesheet" type="text/css" href="http://shiroyuki.com/style/base.css"/>
+    <style type="text/css">
+        body {
+            font-size: 16px;
+            width: 720px;
+            min-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #666;
+            font-weight: 200;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-weight: 200;
+            color: #000;
+            font-size: 24px;
+            border-left: 5px solid #215498;
+            margin-left: -10px;
+            padding-left: 5px;
+        }
+        article {
+            -webkit-column-count: 2; 
+            -webkit-column-rule: 1px solid #eee;
+            -webkit-column-gap: 2em;
+        }
+        header {
+            color: #000;
+            border-bottom: 3px solid #ff9900;
+            font-size: 30px;
+            padding: 20px 0;
+        }
+        summary {
+            position: absolute;
+            left: 0;
+            right: 500px;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        footer {
+            border-top: 3px solid #ddd;
+            padding: 0 0 20px 0;
+            margin: 40px 0 0 0;
+            font-size: 14px;
+        }
+        #container {
+            position: relative;
+        }
+        #container > section {
+            margin-left: 260px;
+        }
+        #footer-logo {
+            height: 20px;
+            float: right;
+        }
+    </style>
 </head>
-
 <body>
-  <a href="https://github.com/shiroyuki/Tori"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/shiroyuki/Tori/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/shiroyuki/Tori/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/shiroyuki/Tori">Tori</a>
-      <span class="small">by <a href="https://github.com/shiroyuki">shiroyuki</a></span></h1>
-
-    <div class="description">
-      Tornado-based simple web framework for anyone who want to get job done
-    </div>
-
-    
-
-    
-      <h2>Dependencies</h2>
-      <p>tornado</p>
-    
-
-    
-      <h2>Install</h2>
-      <p>Not yet available.</p>
-    
-
-    
-      <h2>License</h2>
-      <p>LGPL 3</p>
-    
-
-    
-      <h2>Authors</h2>
-      <p>Juti Noppornpitak (juti_n@yahoo.co.jp)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Juti Noppornpitak (juti_n@yahoo.co.jp)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/shiroyuki/Tori/zipball/master">zip</a> or
-      <a href="https://github.com/shiroyuki/Tori/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/shiroyuki/Tori</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/shiroyuki/Tori">shiroyuki/Tori</a>
-    </div>
-
-  </div>
-
+    <header>Tori, Web Framework for People with Deadline</header>
+    <section id="container">
+        <summary>
+            <p>
+                The common problem of web frameworks is that even if the framework is
+                dead simple to use, deploying sometimes won't be as easy as developing.
+            </p>
+        </summary>
+        <section>
+            <h1>Introduction</h1>
+            <article>
+                <p>
+                    Tori was forked from one of four main modules of Yotsuba Project. Its
+                    objectives are:
+                </p>
+                <ul>
+                    <li>
+                        Simplify and minimize the setup and deploying process for tiny-to-large-scale
+                        web development.
+                    </li>
+                    <li>
+                        Based on top of Facebook's open-source Tornado Web Framework.
+                    </li>
+                    <li>
+                        Support the deployment as a standalone WSGI server, a WSGI
+                        application for Apache 2 (with <code>mod_wsgi</code>) and a Google
+                        App Engine application.
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </section>
+    <footer>
+        <p>
+            <img src="http://shiroyuki.com/image/header-logo.png" id="footer-logo"/>
+            &copy; 2011 Juti Noppornpitak.<br/>
+            <small>This website is made on HTML5 technology.</small>
+        </p>
+    </footer>
 </body>
 </html>
